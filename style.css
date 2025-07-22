@@ -1,0 +1,57 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-image 1s ease-in-out;
+}
+
+.weather-container {
+  height: 100vh;
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/27/07/30/sunrise-1282306_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  height: 100%;
+  padding-top: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  animation: fadeInDown 1.2s ease;
+}
+
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  max-width: 400px;
+  margin: auto;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1.2s ease;
+}
+
+.weather-card img {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.weather-card p {
+  margin: 4px 0;
+  font-size: 1.1rem;
+}
